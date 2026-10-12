@@ -1,0 +1,35 @@
+{
+  "name": "@red-cup-engineering/reconcile-peg-ladder-fills-service",
+  "version": "0.1.1",
+  "description": "Reads fill_order virtual operations for a Hive account since a given block, cross-checked across two public nodes, in the standard fill shape the venue-fill-booking lot consumes, plus the account's current liquid inventory. Read-only.",
+  "type": "module",
+  "private": false,
+  "license": "UNLICENSED",
+  "exports": {
+    ".": "./src/reconcile-peg-ladder-fills.mjs",
+    "./scripts/reconcile-peg-ladder-fills.mjs": "./scripts/reconcile-peg-ladder-fills.mjs"
+  },
+  "bin": {
+    "reconcile-peg-ladder-fills": "scripts/reconcile-peg-ladder-fills.mjs"
+  },
+  "files": [
+    "src",
+    "scripts",
+    "README.md",
+    "package.json"
+  ],
+  "dependencies": {
+    "@red-cup-engineering/metrologic": "workspace:*",
+    "@red-cup-engineering/computer-data-engineering-services-section": "workspace:*",
+    "@red-cup-engineering/hive-blockchain-client-service": "workspace:*"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "check": "node --check src/reconcile-peg-ladder-fills.mjs && node --check scripts/reconcile-peg-ladder-fills.mjs",
+    "test": "node --test test/*.test.mjs",
+    "pack:dry-run": "npm pack --dry-run --ignore-scripts"
+  },
+  "engines": {
+    "node": ">=24.2.0"
+  }
+}

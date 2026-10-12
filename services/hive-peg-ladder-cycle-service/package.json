@@ -1,0 +1,41 @@
+{
+  "name": "@red-cup-engineering/hive-peg-ladder-cycle-service",
+  "version": "0.1.2",
+  "description": "Composes observe-hive-internal-market, derive-peg-ladder, apply-peg-ladder, and reconcile-peg-ladder-fills into one Hive internal-market peg-ladder cycle, with a kill switch that cancels every resting order and refuses instead of deriving/applying when the observer refuses, the haircut moves beyond a declared bound, or the account's liquid balance falls below its reserve.",
+  "type": "module",
+  "private": false,
+  "license": "UNLICENSED",
+  "exports": {
+    ".": "./apps/peg-ladder-cycle.mjs"
+  },
+  "bin": {
+    "peg-ladder-cycle": "apps/peg-ladder-cycle.mjs"
+  },
+  "files": [
+    "apps",
+    "README.md",
+    "package.json"
+  ],
+  "dependencies": {
+    "@red-cup-engineering/metrologic": "workspace:*",
+    "@red-cup-engineering/apply-peg-ladder-service": "workspace:*",
+    "@red-cup-engineering/semiotic-eavt-services-section": "workspace:*",
+    "@red-cup-engineering/computer-data-engineering-services-section": "workspace:*",
+    "@red-cup-engineering/derive-peg-ladder-service": "workspace:*",
+    "@red-cup-engineering/eavt-services-section": "workspace:*",
+    "@red-cup-engineering/computer-file-engineering-services-section": "workspace:*",
+    "@red-cup-engineering/hive-blockchain-client-service": "workspace:*",
+    "@red-cup-engineering/observe-hive-internal-market-service": "workspace:*",
+    "@red-cup-engineering/reconcile-peg-ladder-fills-service": "workspace:*",
+    "@red-cup-engineering/witness-journal-document-service": "workspace:*"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "check": "node --check apps/peg-ladder-cycle.mjs",
+    "test": "node --test test/*.test.mjs",
+    "pack:dry-run": "npm pack --dry-run --ignore-scripts"
+  },
+  "engines": {
+    "node": ">=24.2.0"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "name": "@red-cup-engineering/apply-peg-ladder-service",
+  "version": "0.1.1",
+  "description": "Signs and broadcasts a peg-ladder diff's limit_order_create/limit_order_cancel operations through the revived Hive client, under an armed mandate record naming the account, both operations, and a maximum exposure; refuses mandate-not-armed and writes the diff as a dry-run record otherwise. Every broadcast is journaled with its transaction id.",
+  "type": "module",
+  "private": false,
+  "license": "UNLICENSED",
+  "exports": {
+    ".": "./src/apply-peg-ladder.mjs",
+    "./scripts/apply-peg-ladder.mjs": "./scripts/apply-peg-ladder.mjs"
+  },
+  "bin": {
+    "apply-peg-ladder": "scripts/apply-peg-ladder.mjs"
+  },
+  "files": [
+    "src",
+    "scripts",
+    "README.md",
+    "package.json"
+  ],
+  "dependencies": {
+    "@red-cup-engineering/metrologic": "workspace:*",
+    "@red-cup-engineering/semiotic-eavt-services-section": "workspace:*",
+    "@red-cup-engineering/computer-data-engineering-services-section": "workspace:*",
+    "@red-cup-engineering/eavt-services-section": "workspace:*",
+    "@red-cup-engineering/computer-file-engineering-services-section": "workspace:*",
+    "@red-cup-engineering/hive-blockchain-client-service": "workspace:*",
+    "@red-cup-engineering/hive-fleet-operations-service": "workspace:*",
+    "@red-cup-engineering/witness-journal-document-service": "workspace:*"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "check": "node --check src/apply-peg-ladder.mjs && node --check scripts/apply-peg-ladder.mjs",
+    "test": "node --test test/*.test.mjs",
+    "pack:dry-run": "npm pack --dry-run --ignore-scripts"
+  },
+  "engines": {
+    "node": ">=24.2.0"
+  }
+}
