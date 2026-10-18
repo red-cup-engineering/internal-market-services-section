@@ -2,6 +2,11 @@
   "name": "@red-cup-engineering/apply-peg-ladder-service",
   "version": "0.1.1",
   "description": "Signs and broadcasts a peg-ladder diff's limit_order_create/limit_order_cancel operations through the revived Hive client, under an armed mandate record naming the account, both operations, and a maximum exposure; refuses mandate-not-armed and writes the diff as a dry-run record otherwise. Every broadcast is journaled with its transaction id.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/red-cup-engineering/computer-systems-engineering-services-section.git",
+    "directory": "services/computer-blockchain-system-services-section/services/hive-engineering-services-section/services/internal-market-services-section/services/apply-peg-ladder-service"
+  },
   "type": "module",
   "private": false,
   "license": "UNLICENSED",
