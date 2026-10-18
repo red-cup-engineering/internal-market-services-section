@@ -1,0 +1,16 @@
+[submodule "reconcile-peg-ladder-fills-service"]
+	path = services/reconcile-peg-ladder-fills-service
+	url = https://github.com/red-cup-engineering/reconcile-peg-ladder-fills-service.git
+	branch = main
+[submodule "hive-peg-ladder-cycle-service"]
+	path = services/hive-peg-ladder-cycle-service
+	url = https://github.com/red-cup-engineering/hive-peg-ladder-cycle-service.git
+	branch = main
+[submodule "derive-peg-ladder-service"]
+	path = services/derive-peg-ladder-service
+	url = https://github.com/red-cup-engineering/derive-peg-ladder-service.git
+	branch = main
+[submodule "apply-peg-ladder-service"]
+	path = services/apply-peg-ladder-service
+	url = https://github.com/red-cup-engineering/apply-peg-ladder-service.git
+	branch = main
