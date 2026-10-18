@@ -3,5 +3,9 @@
   "version": "0.1.0",
   "type": "module",
   "description": "Red Cup Engineering service section for the Hive base-layer HIVE:HBD internal market: the liquid peg ladder, its fills, and its cycle.",
-  "license": "UNLICENSED"
+  "license": "UNLICENSED",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/red-cup-engineering/internal-market-services-section.git"
+  }
 }
